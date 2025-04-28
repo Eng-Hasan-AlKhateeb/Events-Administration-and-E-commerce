@@ -11,13 +11,13 @@ const createProduct = async (req, res) => {
 
         const productImages = req.files
 
-        const relatedCompany = req.company._id
+        
         const flag = false
         
-        // Check if the user is authenticated as a company
-        if (!relatedCompany) {
-            return res.status(StatusCodes.UNAUTHORIZED).json({ error: 'You are not authorized to create a product' });
-        }
+        // // Check if the user is authenticated as a company
+        // if (!relatedCompany) {
+        //     return res.status(StatusCodes.UNAUTHORIZED).json({ error: 'You are not authorized to create a product' });
+        // }
         
         for (const productImage of productImages) {
             // limit the image size up to 5 MB
@@ -42,7 +42,7 @@ const createProduct = async (req, res) => {
             // Create the product
             const newProduct = await Product.create({
                 name,
-                relatedCompany: relatedCompany,
+             
                 manufacturerCompany,
                 price,
                 priceOnSale,

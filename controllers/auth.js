@@ -6,7 +6,9 @@ const cookie = require('cookie');
 
 const register = async(req, res) => {
     try {
+        console.log(req.body);
         const { firstName, lastName, email, password, username, phoneNumber } = req.body;
+        const role ='user'
 
         //Check if the email is already registered
         const existingUser = await User.findOne({ email });
@@ -29,6 +31,7 @@ const register = async(req, res) => {
             password,
             username
         });
+        console.log(newUser);
 
         // Generate a JWT token for the user
         const token = newUser.createJWT();
@@ -42,7 +45,7 @@ const register = async(req, res) => {
                 domain: `localhost`,
                 sameSite: 'lax',
             })
-            .json({ user: { firstName, lastName, email, username, phoneNumber }, token });
+            .json({ user: { firstName, lastName, email, role, username, phoneNumber }, token });
     } catch (error) {
         res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ error: 'Something went wrong' });
     }
@@ -52,6 +55,7 @@ const register = async(req, res) => {
 const login = async(req, res) => {
     try {
         const { email, password } = req.body;
+        console.log(req.body)
         if (!email || !password) {
             return res.status(StatusCodes.BAD_REQUEST).json({ error: 'Email and password required' });
         }
@@ -78,6 +82,7 @@ const login = async(req, res) => {
 
             // Generate a JWT token for the user
             const token = company.createJWT();
+            const iscompany = true
 
             res
                 .status(StatusCodes.OK)
@@ -87,7 +92,7 @@ const login = async(req, res) => {
                     domain: `localhost`,
                     sameSite: 'lax',
                 })
-                .json({ company: { name, origin, branches, accounts, desc, profileImgUrl, companyImgUrl }, token });
+                .json({ company: { name, origin, branches, accounts, desc, profileImgUrl, companyImgUrl }, token,iscompany });
         } else {
             // Compare the provided password with the hashed password in the database
             const isPasswordCorrect = await user.comparePassword(password);
@@ -100,8 +105,10 @@ const login = async(req, res) => {
             const phoneNumber = user.phoneNumber
             const role = user.role
 
+
             // Generate a JWT token for the user
             const token = user.createJWT();
+            const iscompany = false
 
             res
                 .status(StatusCodes.OK)
@@ -112,7 +119,7 @@ const login = async(req, res) => {
                     domain: `localhost`,
                     sameSite: 'lax',
                 })
-                .json({ user: { firstName, lastName, email, role, username, phoneNumber }, token });
+                .json({ user: { firstName, lastName, email, role, username, phoneNumber }, token,iscompany   });
         }
     } catch (error) {
         res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ error: 'Something went wrong' });
@@ -128,4 +135,4 @@ const logout = async(req, res) => {
     }
 };
 
-module.exports = { register, login, logout };
+module.exports = { register, login, logout };3

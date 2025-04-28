@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
   name: { type: String, required: true, minlength: 5, maxlength: 100 },
-  relatedCompany: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Company' },
-  manufacturerCompany: { type: String, required: true },
-  price: { type: Number, required: true },
+  relatedCompany: { type: mongoose.Schema.Types.ObjectId, ref: 'Company' },
+  manufacturerCompany: { type: String },
+  price: { type: Number },
   priceOnSale: { type: Number },
   rate: { type: Number, default: 0 },
   ratedBy: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],

@@ -44,8 +44,11 @@ const getUserProfile = async (req, res) => {
 
 const updateUserProfile = async (req, res) => {
     try {
+
+      console.log(req.body)
       // Access the user's ID from the authentication token (it is set in the req.user field by the authenticateUser middleware)
       const userId = req.user.id;
+      console.log("fffffffffffffff"+userId);
 
       // Extract the updated user profile data from the request body
       const { firstName, lastName, phoneNumber, password, email, username, region, title } = req.body;
@@ -62,7 +65,7 @@ const updateUserProfile = async (req, res) => {
       user.lastName = lastName;
       user.phoneNumber = phoneNumber;
       // user.password = password;
-      user.username = username;
+
       user.region = region;
       user.title = title;
       user.email = email;
@@ -71,7 +74,8 @@ const updateUserProfile = async (req, res) => {
       await user.save();
 
       // Return the updated user's profile data (excluding the password)
-      res.status(StatusCodes.OK).json({ user });
+      res.status(StatusCodes.OK).json({ user:{firstName,lastName,phoneNumber,region,email} });
+      console.log(user);
     } catch (error) {
       console.log(error)
       res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ error: 'Something went wrong' });
@@ -82,6 +86,7 @@ const deleteUser = async (req, res) => {
   try {
     // Access the user's ID from the authenticated user object (req.user)
     const userId = req.user.id;
+  
 
     // Find the user in the database by their ID
     const user = await User.findById(userId);

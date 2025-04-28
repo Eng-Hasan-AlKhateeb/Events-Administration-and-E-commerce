@@ -18,6 +18,6 @@ router.use(authenticateUser); // Use the middleware for all routes below
 router.route('/')
   .get(getUserProfile)
   .delete(deleteUser)
-  .patch(updateUserProfile);
+  .put(updateUserProfile);
 
 module.exports = router;

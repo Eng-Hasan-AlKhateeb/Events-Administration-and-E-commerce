@@ -13,7 +13,7 @@ const {
     rateProduct
 } = require('../controllers/products')
 
-router.route('/').post(authenticateCompany, createProduct).get(getAllProducts)
+router.route('/').post( createProduct).get(getAllProducts)
 router.route('/:productID').post(authenticateUser, rateProduct).get(getProduct).delete(authenticateCompany, deleteProduct).patch(authenticateCompany, updateProduct)
 router.route('/:companyID/products').get(getProductsByCompany)
 

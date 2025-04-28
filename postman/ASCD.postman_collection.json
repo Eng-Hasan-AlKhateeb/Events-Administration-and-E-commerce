@@ -1,0 +1,1844 @@
+{
+	"info": {
+		"_postman_id": "c21ec104-0637-4402-bd98-112ea701ed9a",
+		"name": "ASCD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26868211",
+		"_collection_link": "https://a-team-13579000.postman.co/workspace/ASCD~61f16d76-3e2a-4344-847a-69366387b755/collection/26868211-c21ec104-0637-4402-bd98-112ea701ed9a?action=share&source=collection_link&creator=26868211"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get All Products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/products/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoi2LTYsdmD2Kkg2KfZhNmK2LPYsSIsImlkIjoiNjRkYjI4MTM1YjA0ZWEwNmZjMDRlODc4IiwiaWF0IjoxNjkyMDg0MjQ0LCJleHAiOjE2OTIxNzA2NDR9.yMq3epRE-SulGGhsYXHFpb982kVFvOgTlmokJ8_Siz8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "معدات أسنان ناعمة",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerCompany",
+									"value": "Alyaser",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "3000000",
+									"type": "text"
+								},
+								{
+									"key": "priceOnSale",
+									"value": "2700000",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "معدات أسنان",
+									"type": "text"
+								},
+								{
+									"key": "guarantee",
+									"value": "سنة واحدة من تاريخ الشراء",
+									"type": "text"
+								},
+								{
+									"key": "colors",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sizes",
+									"value": "S",
+									"description": "حقل إجباري",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/C:/Users/admin/Desktop/Dis-Hekimligi-Ekipmani-Standartlari.jpg",
+										"/C:/Users/admin/Desktop/download aaaa(1).jpg",
+										"/C:/Users/admin/Desktop/images.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/products/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products/64d670a2b54ad23278592d79",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								"64d670a2b54ad23278592d79"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoi2LTYsdmD2Kkg2KfZhNis2YXYp9mEIiwiaWQiOiI2NGQ2NjkzZjZlYmYxMTA3NzhkOGQ3NTQiLCJpYXQiOjE2OTE3NzUzOTQsImV4cCI6MTY5MTg2MTc5NH0.LdZrT_DbIsoicTzOc2TfX9Ny7REkNScKDs4cBl0dJ7Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/products/64d672aca3f7be338c0de2af",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								"64d672aca3f7be338c0de2af"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoi2LTYsdmD2Kkg2KfZhNis2YXYp9mEIiwiaWQiOiI2NGQ2NjkzZjZlYmYxMTA3NzhkOGQ3NTQiLCJpYXQiOjE2OTE3NzM2ODcsImV4cCI6MTY5MTg2MDA4N30.2_GJ-5PSW5gJBDyir5LfLV9ptp-0QjHkKwDFltfVmGI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "كرسي معالجة",
+									"type": "text"
+								},
+								{
+									"key": "manufacturerCompany",
+									"value": "Aljamal",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "3000000",
+									"type": "text"
+								},
+								{
+									"key": "priceOnSale",
+									"value": "2600000",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "كرسي",
+									"type": "text"
+								},
+								{
+									"key": "guarantee",
+									"value": "سنتين من تاريخ الشراء",
+									"type": "text"
+								},
+								{
+									"key": "colors",
+									"value": "",
+									"description": "يُرجى ملء البيانات في فورم تعديل المنتج من الـendpoint ذات الاسم Get Single Product قبل إرسال البيانات بأكملها.",
+									"type": "text"
+								},
+								{
+									"key": "sizes",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/C:/Users/admin/Desktop/prod1.jpg",
+										"/C:/Users/admin/Desktop/prod2.jpg",
+										"/C:/Users/admin/Desktop/prod3.png"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/products/64d672dea3f7be338c0de2bb",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								"64d672dea3f7be338c0de2bb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products By Company ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products/64d6693f6ebf110778d8d754/products",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								"64d6693f6ebf110778d8d754",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rate Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYjMiLCJpZCI6IjY0ZDY3N2U5OWUxZTM0MDczNDg0NjE3OSIsImlhdCI6MTY5MTc3NzAwMSwiZXhwIjoxNjkxODYzNDAxfQ.LNNhrKktbx_yAw2mnjjlhdwwm5AZ0vTrub0GHDHnNZI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rate\":\"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/products/64d67cb6212c952f081c14b9",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								"64d67cb6212c952f081c14b9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Companies",
+			"item": [
+				{
+					"name": "Get All Companies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/companies/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"companies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Company",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "شركة اليسر",
+									"type": "text"
+								},
+								{
+									"key": "origin",
+									"value": "سوريا",
+									"type": "text"
+								},
+								{
+									"key": "branches",
+									"value": "حلب,دمشق",
+									"description": "يُرجى الانتباه أن الفاصلة هي فاصلة إنجليزية",
+									"type": "text"
+								},
+								{
+									"key": "accounts",
+									"value": "facebook.com/alyeser,instagram.com/Aljamal",
+									"description": "يُرجى الانتباه أن الفاصلة هي فاصلة إنجليزية",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "شركة مختصة بكافة مستلزمات أطباء الأسنان من معدات كهربائية وكيماوية وحشوات ومعدات يدوية",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"description": "الملف الأول هو ملف البروفايل و الثاني الملف الرئيسي للشركة",
+									"type": "file",
+									"src": "/C:/Users/admin/Desktop/download (1).jpg"
+								},
+								{
+									"key": "email",
+									"value": "ِalyaser@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "11111111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/companies/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"companies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Company",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/companies/64d6693f6ebf110778d8d754",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"companies",
+								"64d6693f6ebf110778d8d754"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Company",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGVzdGluZyIsImlkIjoiNjRkMzYwOTQ1OTdiNzAwNTI0NDgyNTMyIiwiaWF0IjoxNjkxNTc0NjUyLCJleHAiOjE2OTE2NjEwNTJ9.ZLXaB4MRGgV-ZMfQxVQrIUV2z0PsHoyxmv6SSFCDVCQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/companies/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"companies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Company",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGVzdGluZyIsImlkIjoiNjRkMzYwOTQ1OTdiNzAwNTI0NDgyNTMyIiwiaWF0IjoxNjkxNTc0NjUyLCJleHAiOjE2OTE2NjEwNTJ9.ZLXaB4MRGgV-ZMfQxVQrIUV2z0PsHoyxmv6SSFCDVCQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "",
+									"description": "يمكن أن تكون هذه الحقول فارغة أو ممتلئة",
+									"type": "text"
+								},
+								{
+									"key": "origin",
+									"value": "",
+									"description": "يمكن أن تكون هذه الحقول فارغة أو ممتلئة",
+									"type": "text"
+								},
+								{
+									"key": "branches",
+									"value": "",
+									"description": "يمكن أن تكون هذه الحقول فارغة أو ممتلئة",
+									"type": "text"
+								},
+								{
+									"key": "accounts",
+									"value": "",
+									"description": "يمكن أن تكون هذه الحقول فارغة أو ممتلئة",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "",
+									"description": "يمكن أن تكون هذه الحقول فارغة أو ممتلئة",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"description": "يمكن أن تكون هذه الحقول فارغة أو ممتلئة",
+									"type": "file",
+									"src": [
+										"/C:/Users/admin/Desktop/abc.jpg",
+										"/C:/Users/admin/Desktop/wallpaperflare.com_wallpaper.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/companies/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"companies",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve Company",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWQiOiI2NGQ3OTQ2MjFhMWFjMzFhZWM1ZWE2MDIiLCJpYXQiOjE2OTE4NDk4MjcsImV4cCI6MTY5MTkzNjIyN30.x57KKXQccWUpoNzh5304alGKEzOU69TfPfO1j9ZzkOQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/companies/64d6693f6ebf110778d8d754",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"companies",
+								"64d6693f6ebf110778d8d754"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Unapproved Companies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWQiOiI2NGQ3OTQ2MjFhMWFjMzFhZWM1ZWE2MDIiLCJpYXQiOjE2OTE4NDk4MjcsImV4cCI6MTY5MTkzNjIyN30.x57KKXQccWUpoNzh5304alGKEzOU69TfPfO1j9ZzkOQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/companies/approves/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"companies",
+								"approves",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blogs",
+			"item": [
+				{
+					"name": "Get Single Blog",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/blogs/64d66197d451152c4857506a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"blogs",
+								"64d66197d451152c4857506a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Blog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxNzcwODU4LCJleHAiOjE2OTE4NTcyNTh9.2qz997KF3lCa7UxNP9mTK0uRC50hsURMWqu_3NRKqtM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/admin/Desktop/the_starry_night-wallpaper-2560x1600.jpg"
+								},
+								{
+									"key": "title",
+									"value": "معاجين الأسنان وغسولات الفم لمحاربة مشاكل اللثة",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "يعد التهاب اللثة (بالإنجليزية: Gingivitis) أولى مراحل أمراض اللثة، وينجم عن تراكم البكتيريا وتكون البلاك الذي يسبب تورم اللثة، واحمرارها، وسهولة الإصابة بنزيف عند تفريش الأسنان.\nقد يتطور التهاب اللثة إذا ترك دون علاج إلى التهاب دواعم السن (بالإنجليزية: Periodontitis)، وهو التهاب شديد في اللثة يؤثر على الأنسجة التي تدعم الأسنان وتثبتها، مع تكون جيوب بين اللثة والأسنان، ويمكن أن يؤدي إلى فقدان الأسنان وتضرر عظام الفك في حالة إهمال علاجه.\n",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "الأسنان,معجون,اللثة",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/blogs/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"blogs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Blogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/blogs/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"blogs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Blog",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxNzcwODU4LCJleHAiOjE2OTE4NTcyNTh9.2qz997KF3lCa7UxNP9mTK0uRC50hsURMWqu_3NRKqtM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/blogs/64d6634a5f05452f1c282e99",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"blogs",
+								"64d6634a5f05452f1c282e99"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Blog",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxNzcwODU4LCJleHAiOjE2OTE4NTcyNTh9.2qz997KF3lCa7UxNP9mTK0uRC50hsURMWqu_3NRKqtM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"description": "يمكن أن تكون هذه الحقول فارغة أو ممتلئة.",
+									"type": "file",
+									"src": "/C:/Users/admin/Desktop/abc.jpg"
+								},
+								{
+									"key": "title",
+									"value": "",
+									"description": "يمكن أن تكون هذه الحقول فارغة أو ممتلئة.",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "",
+									"description": "يمكن أن تكون هذه الحقول فارغة أو ممتلئة.",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "",
+									"description": "يمكن أن تكون هذه الحقول فارغة أو ممتلئة.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/blogs/64d66197d451152c4857506a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"blogs",
+								"64d66197d451152c4857506a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Manage likes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxNzcwODU4LCJleHAiOjE2OTE4NTcyNTh9.2qz997KF3lCa7UxNP9mTK0uRC50hsURMWqu_3NRKqtM",
+								"description": "يمكن استخدام هذه الـendpoint عند الإعجاب أو إلغاء الإعجاب، بتوفير يوزر توكن معيّن",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/blogs/64d66197d451152c4857506a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"blogs",
+								"64d66197d451152c4857506a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get liked blogs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxNzcwODU4LCJleHAiOjE2OTE4NTcyNTh9.2qz997KF3lCa7UxNP9mTK0uRC50hsURMWqu_3NRKqtM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/blogs/liked",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"blogs",
+								"liked"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Get All Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/comments/64d66197d451152c4857506a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"comments",
+								"64d66197d451152c4857506a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFhYWFhIiwiaWQiOiI2NGQ3OTU5MTY4NmRmNzFhODQyMzYzOGMiLCJpYXQiOjE2OTE4NTAxMjksImV4cCI6MTY5MTkzNjUyOX0.sLS1XNA8s7nLaHdeYDrMIZ6W8B2jw89rWQO0mIwr9DA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"مقال جيد جدًا استمروا\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/comments/64d66197d451152c4857506a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"comments",
+								"64d66197d451152c4857506a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWQiOiI2NGQ3OTQ2MjFhMWFjMzFhZWM1ZWE2MDIiLCJpYXQiOjE2OTE4NDk4MjcsImV4cCI6MTY5MTkzNjIyN30.x57KKXQccWUpoNzh5304alGKEzOU69TfPfO1j9ZzkOQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/comments/64d795a5686df71a84236390",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"comments",
+								"64d795a5686df71a84236390"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comment",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxNzcwODU4LCJleHAiOjE2OTE4NTcyNTh9.2qz997KF3lCa7UxNP9mTK0uRC50hsURMWqu_3NRKqtM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"تحية لمطوري هذا الموقع الرائع\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/comments/64d668306ebf110778d8d74e",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"comments",
+								"64d668306ebf110778d8d74e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "Get All Events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/events/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"events",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWQiOiI2NGQ3OTQ2MjFhMWFjMzFhZWM1ZWE2MDIiLCJpYXQiOjE2OTIwODQ2ODQsImV4cCI6MTY5MjE3MTA4NH0.1Qh1SqO6lnwQyPksnbkdD5QCie-lLA9UwThLvM5axhE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"محاضرة علمية بعنوان: كيفية التخلص من القلح بالليزر\",\r\n    \"location\":\"قاعة الفارابي\",\r\n    \"date\":\"3/5/2023\",\r\n    \"time\":\"15.00\",\r\n    \"desc\":\"محاضرة شيقة احضروها بليز\", \r\n    \"maxAttendants\":\"100\", \r\n    \"instructor\":\"الدكتور محمد صلاح\", \r\n    \"duration\":\"ساعتان\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/events/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"events",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Event",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/events/64d683fdf7fce604b0d00bee",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"events",
+								"64d683fdf7fce604b0d00bee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Event",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/events/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"events",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Event",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"محاضرة علمية بعنوان: كيفية التخلص من القلح بالليزر\",\r\n    \"location\":\"قاعة الفارابي\",\r\n    \"date\":\"3/5/2023\",\r\n    \"time\":\"15.00\",\r\n    \"desc\":\"محاضرة شيقة احضروها بليز\", \r\n    \"maxAttendants\":\"100\", \r\n    \"instructor\":\"الدكتور محمد صلاح\", \r\n    \"duration\":\"ثلاث ساعات\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/events/64d683fdf7fce604b0d00bee",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"events",
+								"64d683fdf7fce604b0d00bee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Events By User ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxNzg0MzIyLCJleHAiOjE2OTE4NzA3MjJ9.B5Db7QJ1gA6GiT6rhvDASKYRhj8kaZWHlzFSYMMSPI0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/events/reservations/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"events",
+								"reservations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book For Event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxNzg0NTAwLCJleHAiOjE2OTE4NzA5MDB9.Jw37_6ZW-xjfhGyZqTbirXQu6RViq5OLA0xzDwWaxRQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/events/64d683fdf7fce604b0d00bee",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"events",
+								"64d683fdf7fce604b0d00bee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAllEvents",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/events/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"events",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "Get All Messages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/messages/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"messages",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\":\"موقع جيد جدًا ولكن يُرجى إضافة ميزة الدفع الإلكتروني\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/messages/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"messages",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete All Messages",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/messages/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"messages",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Message",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/messages/64d12f3956b6dc326cc363f0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"messages",
+								"64d12f3956b6dc326cc363f0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sponsors",
+			"item": [
+				{
+					"name": "Get All Sponsors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/sponsors/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"sponsors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Sponsors List",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWQiOiI2NGQ3OTQ2MjFhMWFjMzFhZWM1ZWE2MDIiLCJpYXQiOjE2OTIwODQ2ODQsImV4cCI6MTY5MjE3MTA4NH0.1Qh1SqO6lnwQyPksnbkdD5QCie-lLA9UwThLvM5axhE",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWQiOiI2NGQ3OTQ2MjFhMWFjMzFhZWM1ZWE2MDIiLCJpYXQiOjE2OTIwODQ2ODQsImV4cCI6MTY5MjE3MTA4NH0.1Qh1SqO6lnwQyPksnbkdD5QCie-lLA9UwThLvM5axhE",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"diamondId\":\"64db2a505b04ea06fc04e88f\",\r\n    \"goldenId\":\"64db2a505b04ea06fc04e88f\",\r\n    \"silverId\":\"64db2a505b04ea06fc04e88f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/sponsors/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"sponsors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Sponsors List",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/sponsors/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"sponsors",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Search User By Username",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/users/search?username=H",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"search"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "H"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxIiwiaWQiOiI2NGMzOTUzMjk2NjZhOTMyNTgwZmJjODkiLCJpYXQiOjE2OTA1NDE4MzAsImV4cCI6MTY5MDYyODIzMH0.54anI_gZlUyUlyg6kXKARzLzQfVtDx6_xY6JfbvmMHo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user profile",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxIiwiaWQiOiI2NGMzOTUzMjk2NjZhOTMyNTgwZmJjODkiLCJpYXQiOjE2OTA1NDEwNzUsImV4cCI6MTY5MDYyNzQ3NX0.SnSKalOO9tmYP7LhBSZWByAe4hLSnQiy0l02FmXFOqc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\": \"user\",\r\n    \"favBlogs\": [],\r\n    \"favProducts\": [],\r\n    \"reservations\": [],\r\n    \"_id\": \"64c395329666a932580fbc89\",\r\n    \"firstName\": \"user7\",\r\n    \"lastName\": \"user7\",\r\n    \"phoneNumber\": \"0911111111\",\r\n    \"email\": \"user1@example.com\",\r\n    \"username\": \"user1\",\r\n    \"region\": \"Aleppo\",\r\n    \"title\": \"Prof.\",\r\n    \"__v\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxNzcwODU4LCJleHAiOjE2OTE4NTcyNTh9.2qz997KF3lCa7UxNP9mTK0uRC50hsURMWqu_3NRKqtM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\" : \"Nour\",\r\n    \"lastName\" : \"Qazan\",\r\n    \"email\" : \"Nour999@gmail.com\",\r\n    \"password\" : \"777888999\",\r\n    \"username\" : \"Nour1\",\r\n    \"phoneNumber\" : \"0911111111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"account@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxNzcwODU4LCJleHAiOjE2OTE4NTcyNTh9.2qz997KF3lCa7UxNP9mTK0uRC50hsURMWqu_3NRKqtM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/auth/logout",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Statistics",
+			"item": [
+				{
+					"name": "Get All Statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/statistics/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"statistics",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Statistic",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWQiOiI2NGQ3OTQ2MjFhMWFjMzFhZWM1ZWE2MDIiLCJpYXQiOjE2OTE4NDk4MjcsImV4cCI6MTY5MTkzNjIyN30.x57KKXQccWUpoNzh5304alGKEzOU69TfPfO1j9ZzkOQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"شركات مشاركة في المئتمر الأخير\",\r\n    \"value\":\"16\",\r\n    \"desc\":\"شاركت أكثر من 15 شركة في المؤتمر السابق، مما يعكس القدرة التنظيمية الكبيرة في المؤتمرات العلمية السنوية لأطباء الأسنان\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/statistics/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"statistics",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Statistic",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWQiOiI2NGQ3OTQ2MjFhMWFjMzFhZWM1ZWE2MDIiLCJpYXQiOjE2OTE4NDk4MjcsImV4cCI6MTY5MTkzNjIyN30.x57KKXQccWUpoNzh5304alGKEzOU69TfPfO1j9ZzkOQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"شركات مشاركة في المئتمر الأخير\",\r\n    \"value\":\"15\",\r\n    \"desc\":\"شاركت أكثر من 15 شركة في المؤتمر السابق، مما يعكس القدرة التنظيمية الكبيرة في المؤتمرات العلمية السنوية لأطباء الأسنان\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/statistics/64d79d353f3f2e2acc40f6d4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"statistics",
+								"64d79d353f3f2e2acc40f6d4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Statistic",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWQiOiI2NGQ3OTQ2MjFhMWFjMzFhZWM1ZWE2MDIiLCJpYXQiOjE2OTE4NDk4MjcsImV4cCI6MTY5MTkzNjIyN30.x57KKXQccWUpoNzh5304alGKEzOU69TfPfO1j9ZzkOQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/statistics/64d79d353f3f2e2acc40f6d4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"statistics",
+								"64d79d353f3f2e2acc40f6d4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete All Statistics",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWQiOiI2NGQ3OTQ2MjFhMWFjMzFhZWM1ZWE2MDIiLCJpYXQiOjE2OTE4NDk4MjcsImV4cCI6MTY5MTkzNjIyN30.x57KKXQccWUpoNzh5304alGKEzOU69TfPfO1j9ZzkOQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/statistics/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"statistics",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product Cart",
+			"item": [
+				{
+					"name": "Add Product To Cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFjY291bnQiLCJpZCI6IjY0ZDkwYzIxZmMwMzliMGI2MDAwOGRhNSIsImlhdCI6MTY5MjAzNzYyMywiZXhwIjoxNjkyMTI0MDIzfQ.fg8r_4cVYcF4SKQ5lrvvckqLz_20T7p7nnq15u6Rz_A",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/cart/64d670a2b54ad23278592d79",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cart",
+								"64d670a2b54ad23278592d79"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product Cart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxOTMxMDUzLCJleHAiOjE2OTIwMTc0NTN9.NtzaQJ9bjz2e63rjatDNNedZEx3uKRplWEaFIzju6rE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/cart/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete From Cart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxOTMxMDUzLCJleHAiOjE2OTIwMTc0NTN9.NtzaQJ9bjz2e63rjatDNNedZEx3uKRplWEaFIzju6rE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/cart/64d670a2b54ad23278592d79",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cart",
+								"64d670a2b54ad23278592d79"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete All Products From Cart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxOTMxMDUzLCJleHAiOjE2OTIwMTc0NTN9.NtzaQJ9bjz2e63rjatDNNedZEx3uKRplWEaFIzju6rE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/cart/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wishlist",
+			"item": [
+				{
+					"name": "Add Product To Wishlist",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxOTMxMDUzLCJleHAiOjE2OTIwMTc0NTN9.NtzaQJ9bjz2e63rjatDNNedZEx3uKRplWEaFIzju6rE",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/wishlist/products/64d66f93a45cbb21e098a02b",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"wishlist",
+								"products",
+								"64d66f93a45cbb21e098a02b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Blog To Wishlist",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxOTMxMDUzLCJleHAiOjE2OTIwMTc0NTN9.NtzaQJ9bjz2e63rjatDNNedZEx3uKRplWEaFIzju6rE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/wishlist/blogs/64d66197d451152c4857506a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"wishlist",
+								"blogs",
+								"64d66197d451152c4857506a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Wishlist",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxOTMxMDUzLCJleHAiOjE2OTIwMTc0NTN9.NtzaQJ9bjz2e63rjatDNNedZEx3uKRplWEaFIzju6rE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/wishlist/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"wishlist",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product From Wishlist",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/wishlist/products/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"wishlist",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete BlogFrom Wishlist",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxOTMxMDUzLCJleHAiOjE2OTIwMTc0NTN9.NtzaQJ9bjz2e63rjatDNNedZEx3uKRplWEaFIzju6rE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/wishlist/blogs/64d66197d451152c4857506a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"wishlist",
+								"blogs",
+								"64d66197d451152c4857506a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete All Products And Blogs Wishlist",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikhhc2FuIEFsa2hhdGVlYiIsImlkIjoiNjRkNjVmODYzMjgxZTUyYThjMTFiNzNmIiwiaWF0IjoxNjkxOTMxMDUzLCJleHAiOjE2OTIwMTc0NTN9.NtzaQJ9bjz2e63rjatDNNedZEx3uKRplWEaFIzju6rE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/wishlist/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"wishlist",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "localhost:3000/api/v1"
+		}
+	]
+}

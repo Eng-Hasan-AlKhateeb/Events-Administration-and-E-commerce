@@ -8,6 +8,7 @@ const path = require('path');
 const createCompany = async (req, res) => {
     try {
         const { email, password, name, origin, branches, accounts, desc } = req.body;
+        console.log(req.body)
 
         // Process uploaded images using Multer
         const profileImg = req.files[0];

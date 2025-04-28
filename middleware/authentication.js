@@ -11,8 +11,9 @@ const auth = async (req, res, next) => {
     const token = authHeader.split(' ')[1]
     try {
         const payload = jwt.verify(token, process.env.JWT_SECRET) // decode the token with the JWT_SECRET used to sign it
+        console.log(payload);
         const user = await User.findById(payload.id).select('-password')
-        
+        console.log(user);
         if (!user) {
             const company = await Company.findById(payload.id).select('-password')
             if (!company){
